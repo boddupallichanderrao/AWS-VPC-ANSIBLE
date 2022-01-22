@@ -13,7 +13,7 @@
     - name: Create vprofile ec2 key
       ec2_key:
         name: vprofile-key
-        region: "{{region}}"
+        region: "{{ region }}"
       register: key_out
 
 
@@ -28,7 +28,7 @@
       ec2_group:
         name: Bastion-host-sg
         description: Allow port 22 from everywhere and all port within sg
-        region: "{{region}}"
+        region: "{{ region }}"
         vpc_id: "{{vpcid}}"
         rules:
           - proto: tcp
@@ -40,7 +40,7 @@
     - name: Creating Bastion Host
       ec2:
         key_name: vprofile-key
-        region: "{{region}}"
+        region: "{{ region }}"
         instance_type: t2.micro
         image: "{{ bastion_ami }}"
         wait: yes
