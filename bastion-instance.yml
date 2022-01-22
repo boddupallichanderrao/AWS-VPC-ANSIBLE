@@ -35,6 +35,8 @@
             from_port: 22
             to_port: 22
             cidr_ip: "{{MYIP}}"
+            resource_tags:
+              Name: bastion-sg
       register: BastionSG_out
 
     - name: Creating Bastion Host
