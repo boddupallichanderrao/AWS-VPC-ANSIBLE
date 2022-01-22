@@ -98,7 +98,7 @@
         resource_tags:
           Name: vprofile_IGW
       register: igw_out
- # if error comes boto install    use this  command   pip install boto boto3
+
     - name: Set up public subnet route table
       ec2_vpc_route_table:
         vpc_id: "{{vpcout.vpc.id}}"
