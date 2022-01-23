@@ -20,7 +20,7 @@
     - name: Save private key into file bastion-key.pem
       copy:
         content: "{{key_out.key.private_key}}"
-        dest: "./bastion-key.pem"
+        dest: "./vprofile-key.pem"
         mode: 0600
       when: key_out.changed
 
@@ -46,7 +46,7 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-          Name: "Bastion_host"
+          Name: "Bastion_host_new"
           Project: Vprofile
           Owner: DevOps Team
         exact_count: 1
