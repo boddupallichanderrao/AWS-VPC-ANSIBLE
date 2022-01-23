@@ -17,7 +17,7 @@
       register: key_out
 
 
-    - name: Save private key into file bastion-key.pem
+    - name: Save private key into file vprofile-key.pem
       copy:
         content: "{{key_out.key.private_key}}"
         dest: "./vprofile-key.pem"
@@ -56,5 +56,6 @@
           Owner: DevOps Team
         group_id: "{{BastionSG_out.group_id}}"
         vpc_subnet_id: "{{pubsub1id}}"
-      register: bastionHost_out
       when: bastionHost_out.changed
+      register: bastionHost_out
+      
