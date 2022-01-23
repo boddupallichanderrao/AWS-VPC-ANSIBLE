@@ -56,6 +56,5 @@
           Owner: DevOps Team
         group_id: "{{BastionSG_out.group_id}}"
         vpc_subnet_id: "{{pubsub1id}}"
-      when: bastionHost_out.changed
       register: bastionHost_out
       
