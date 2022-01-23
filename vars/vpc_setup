@@ -23,4 +23,4 @@ state: present
 
 #bastion variables
 bastion_ami: ami-001089eb624938d9f 
-MYIP: 60.243.174.100/32
+MYIP: 27.6.172.194/32
